@@ -1,0 +1,54 @@
+.side-profile {
+  width: 30%;
+  height: 100%;
+  padding: 10px;
+  background-color: #fffafa;
+  .profile-data {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .profile-img {
+      width: 150px;
+      height: 150px;
+      background-position: center;
+      background-size: cover;
+      //   border: solid 2px #007fff;
+      border-radius: 100px;
+      margin-top: 1vh;
+    }
+    .tasks-data {
+      display: flex;
+      justify-content: space-around;
+      width: 100%;
+      padding-top: 5%;
+      .tasks {
+        text-align: center;
+        .number {
+          font-family: "Secular One", sans-serif;
+        }
+      }
+    }
+  }
+  .pages {
+    ul {
+      padding-top: 5vh;
+      list-style: none;
+      li {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        font-weight: 300;
+        display: flex;
+        justify-content: space-between;
+        font-family: "Roboto", sans-serif;
+        .svg {
+          margin-right: 10px;
+        }
+        &:hover {
+          background-color: #f0f8ff;
+        }
+      }
+    }
+  }
+}
