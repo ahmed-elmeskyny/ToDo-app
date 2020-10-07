@@ -1,0 +1,17 @@
+.notes-page {
+  width: 100%;
+  .notes-header {
+    padding: 30px;
+    padding-top: 15px;
+    padding-bottom: 0px;
+    border-bottom: 1px solid #d0cfcf;
+    h1 {
+      font-family: "Secular One", sans-serif;
+    }
+  }
+  .notes {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+}

@@ -1,0 +1,25 @@
+.empty-task {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 65%;
+  margin-top: 20px;
+  border-right: 1px solid #d0cfcf;
+  p {
+    margin-bottom: 10px;
+    opacity: 0.5;
+  }
+}
+.empty-discription {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  border-right: 1px solid #d0cfcf;
+  p {
+    margin-bottom: 10px;
+    opacity: 0.5;
+  }
+}

@@ -1,0 +1,38 @@
+.task-container {
+  display: flex;
+  padding: 15px;
+  background-color: #f4f1f1;
+  border-bottom: 1px solid #d0cfcf;
+  .not-done {
+    text-align: center;
+    width: 35px;
+    height: 35px;
+    padding-top: 6.5px;
+    border-radius: 50px;
+    border: 1px solid;
+    color: #8b8989;
+  }
+  .done {
+    text-align: center;
+    width: 35px;
+    height: 35px;
+    padding-top: 6.5px;
+    border-radius: 50px;
+    border: 1px solid;
+    color: white;
+    background-color: #007fff;
+  }
+  .task-info {
+    margin-left: 20px;
+    text-align: left;
+    p {
+      font-family: "Secular One", sans-serif;
+    }
+    span {
+      position: relative;
+      top: -5px;
+      left: 2px;
+      font-size: 10px;
+    }
+  }
+}

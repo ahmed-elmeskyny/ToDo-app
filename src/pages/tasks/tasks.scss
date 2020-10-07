@@ -1,0 +1,50 @@
+.task-page-container {
+  width: 100%;
+  display: flex;
+}
+
+.tasks-container {
+  display: flex;
+  flex-direction: column;
+  width: 65%;
+  height: 510px;
+  border-right: 1px solid #d0cfcf;
+  .tasks-header {
+    width: 100%;
+    height: 65px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    text-align: left;
+    border-left: #007ff0 solid 7px;
+    border-bottom: 1px solid #d0cfcf;
+    padding: 0px 8px 0px 8px;
+    font-family: "Secular One", sans-serif;
+  }
+  .tasks-main {
+    height: 450px;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    &:hover {
+      overflow-y: scroll;
+      cursor: pointer;
+    }
+  }
+  .create-task {
+    width: 100%;
+    height: 45px;
+    background-color: white;
+    border-top: 1px solid #d0cfcf;
+    text-align: center;
+    padding: 10px;
+  }
+}
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #007ff0;
+  border-radius: 25px;
+}

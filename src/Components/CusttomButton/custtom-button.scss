@@ -9,8 +9,24 @@
   padding-left: 10px;
   font-family: "Rubik", sans-serif;
   font-weight: 600;
+  outline: none;
   &:hover {
     background-color: white;
     color: #007fff;
+    cursor: pointer;
+  }
+}
+.inverted {
+  background-color: #007ff0;
+  color: white;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  padding: 6px 15px 6px 15px;
+  font-family: "Rubik", sans-serif;
+  font-weight: 600;
+  outline: none;
+  &:hover {
+    opacity: 0.6;
+    cursor: pointer;
   }
 }

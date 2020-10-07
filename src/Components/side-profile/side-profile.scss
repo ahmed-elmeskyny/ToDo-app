@@ -1,13 +1,17 @@
 .side-profile {
-  width: 30%;
+  width: 35%;
   height: 100%;
   padding: 10px;
-  background-color: #fffafa;
+  border-right: 1px solid #d0cfcf;
   .profile-data {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    .name {
+      text-align: center;
+      padding: 10px 0px 10px 0px;
+    }
     .profile-img {
       width: 150px;
       height: 150px;
@@ -31,10 +35,24 @@
     }
   }
   .pages {
+    margin-top: 20px;
+    cursor: pointer;
     ul {
       padding-top: 5vh;
       list-style: none;
-      li {
+      .li {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        font-weight: 300;
+        display: flex;
+        justify-content: space-between;
+        font-family: "Roboto", sans-serif;
+        background-color: #007fff;
+        color: white;
+        border-radius: 10px;
+      }
+      .link {
         width: 100%;
         padding: 10px;
         margin-bottom: 10px;
@@ -43,10 +61,13 @@
         justify-content: space-between;
         font-family: "Roboto", sans-serif;
         .svg {
-          margin-right: 10px;
+          display: none;
         }
         &:hover {
           background-color: #f0f8ff;
+          .svg {
+            display: flex;
+          }
         }
       }
     }

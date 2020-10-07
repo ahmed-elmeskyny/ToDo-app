@@ -1,0 +1,39 @@
+.form {
+  display: flex;
+  align-items: center;
+  margin-left: 35px;
+  .date-form {
+    display: flex;
+    flex-direction: column;
+    label {
+      padding-bottom: 5px;
+    }
+    input {
+      border-radius: 10px;
+      height: 30px;
+      padding: 10px;
+      border-style: solid;
+      border-color: #e6e4e4;
+      background-color: #e6e4e4;
+      outline: none;
+      margin-right: 20px;
+    }
+  }
+  .discription-form {
+    display: flex;
+    flex-direction: column;
+    label {
+      padding-bottom: 5px;
+    }
+    input {
+      border-radius: 10px;
+      height: 30px;
+      padding: 10px;
+      border-style: solid;
+      border-color: #e6e4e4;
+      background-color: #e6e4e4;
+      outline: none;
+      margin-right: 20px;
+    }
+  }
+}

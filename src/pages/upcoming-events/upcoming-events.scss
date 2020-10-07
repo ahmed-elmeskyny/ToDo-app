@@ -1,0 +1,24 @@
+.upcoming-page {
+  width: 100%;
+  .upcoming-header {
+    padding: 30px;
+    padding-top: 15px;
+    padding-bottom: 0px;
+    border-bottom: 1px solid #d0cfcf;
+    h1 {
+      font-family: "Secular One", sans-serif;
+    }
+  }
+  .event-form {
+    margin: 20px;
+  }
+  .events-container {
+    padding-left: 40px;
+    overflow-y: hidden;
+    height: 350px;
+    &:hover {
+      overflow-y: scroll;
+      cursor: pointer;
+    }
+  }
+}

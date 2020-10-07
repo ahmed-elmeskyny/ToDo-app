@@ -1,0 +1,28 @@
+.event-container {
+  display: flex;
+  align-items: center;
+  margin: 5px;
+  background-color: #f3f2f2;
+  width: 700px;
+  padding: 10px;
+  border-radius: 20px;
+  .date {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;
+    font-family: "Secular One", sans-serif;
+    background-color: #e6e4e4;
+    border-radius: 15px;
+  }
+  .event-disc {
+    width: 100%;
+    margin-left: 10px;
+    text-align: left;
+    font-weight: 700;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+}

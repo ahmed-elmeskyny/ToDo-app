@@ -1,0 +1,43 @@
+.signup-container {
+  padding: 20px;
+  margin: 10px;
+  width: 30%;
+  h1 {
+    font-family: "Secular One", sans-serif;
+  }
+  span {
+    margin-bottom: 2000px;
+  }
+
+  #signup-form {
+    input {
+      background: none;
+      background-color: white;
+      color: grey;
+      font-size: 18px;
+      padding: 10px 10px 10px 5px;
+      display: block;
+      width: 100%;
+      border: none;
+      border-radius: 0;
+      border-bottom: 1px solid grey;
+      &:focus {
+        outline: none;
+        border-bottom: 2px solid #007fff;
+      }
+    }
+    input[type="password"] {
+      letter-spacing: 0.3em;
+    }
+
+    label {
+      color: grey;
+      font-size: 16px;
+      font-weight: normal;
+      position: relative;
+      pointer-events: none;
+      top: 10px;
+      transition: 300ms ease all;
+    }
+  }
+}

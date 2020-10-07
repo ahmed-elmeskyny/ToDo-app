@@ -1,0 +1,16 @@
+.note-container {
+  width: 200px;
+  background-color: lightseagreen;
+  padding: 8px;
+  margin: 10px;
+  border-radius: 20px;
+  .note-title {
+    font-family: "Secular One", sans-serif;
+    border-bottom: 2px black solid;
+    margin-bottom: 5px;
+  }
+  .deletee {
+    margin-top: 8px;
+    padding-left: 160px;
+  }
+}
