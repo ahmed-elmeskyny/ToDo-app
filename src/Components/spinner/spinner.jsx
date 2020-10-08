@@ -3,7 +3,7 @@ import "./spinner.scss";
 
 export const Spinner = () => (
   <svg className="sbg" viewBox="-25 -25 100 100">
-    <circle fill="#007fff" stroke="none" cx="6" cy="25" r="6">
+    <circle fill="#14557b" stroke="none" cx="6" cy="25" r="6">
       <animateTransform
         attributeName="transform"
         dur="1s"
@@ -20,7 +20,7 @@ export const Spinner = () => (
         begin="0.1"
       />
     </circle>
-    <circle fill="#007fff" stroke="none" cx="30" cy="25" r="6">
+    <circle fill=" #14557b" stroke="none" cx="30" cy="25" r="6">
       <animateTransform
         attributeName="transform"
         dur="1s"
@@ -37,7 +37,7 @@ export const Spinner = () => (
         begin="0.2"
       />
     </circle>
-    <circle fill="#007fff" stroke="none" cx="54" cy="25" r="6">
+    <circle fill=" #14557b" stroke="none" cx="54" cy="25" r="6">
       <animateTransform
         attributeName="transform"
         dur="1s"

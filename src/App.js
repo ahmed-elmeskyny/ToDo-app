@@ -73,14 +73,18 @@ class App extends React.Component {
       <>
         <TaskForm></TaskForm>
         <Header unsub={this.unsubscribeFromAuth}></Header>
+        <Route
+          exact
+          path="/"
+          render={(props) => (
+            <SignInSignUp
+              history={props.history}
+              currentUser={this.props.currentUser}
+            ></SignInSignUp>
+          )}
+        />
         <div className="main">
           <Switch>
-            <Route
-              exact
-              path="/"
-              render={(props) => <SignInSignUp {...props}></SignInSignUp>}
-            />
-
             <Route
               exact
               path="/tasks"
