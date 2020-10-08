@@ -8,13 +8,13 @@ import "./event.scss";
 const Event = ({ event, DeleteEvent, user }) => {
   return (
     <div className="event-container">
-      <div className="date" style={{ color: "#007FFF" }}>
+      <div className="date" style={{ color: "#14557b" }}>
         <span>{event.eventDate}</span>
       </div>
       <div className="event-disc">
         <p>{event.event}</p>
         <AiOutlineDelete
-          style={{ color: "#007fff" }}
+          style={{ color: " #7fcec5" }}
           onClick={() => {
             db.collection("UsersData")
               .doc(`${user.id}`)

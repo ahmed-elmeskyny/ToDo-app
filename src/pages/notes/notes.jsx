@@ -3,8 +3,10 @@ import "./notes.scss";
 import Note from "../../Components/note/note";
 import SideProfile from "../../Components/side-profile/side-profile";
 import NoteForm from "../../Components/note-form/note-form";
+import Empty from "../../Components/empty/empty";
+import { connect } from "react-redux";
 
-const Notes = () => (
+const Notes = ({ notes }) => (
   <>
     <SideProfile></SideProfile>
     <div className="notes-page">
@@ -15,15 +17,16 @@ const Notes = () => (
         <NoteForm></NoteForm>
       </div>
       <div className="notes">
-        <Note style={{ backgroundColor: "lightblue" }}></Note>
-        <Note style={{ backgroundColor: "lightpink" }}></Note>
-        <Note style={{ backgroundColor: "lightgreen" }}></Note>
-        <Note style={{ backgroundColor: "lightgrey" }}></Note>
-        <Note></Note>
-        <Note style={{ backgroundColor: "lightyellow" }}></Note>
+        {notes ? (
+          notes.map((note) => <Note key={note.id} note={note.note}></Note>)
+        ) : (
+          <Empty> no notes to see</Empty>
+        )}
       </div>
     </div>
   </>
 );
-
-export default Notes;
+const mapStateToProps = (state) => ({
+  notes: state.notes.notes,
+});
+export default connect(mapStateToProps)(Notes);

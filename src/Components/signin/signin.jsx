@@ -2,8 +2,7 @@ import React from "react";
 import "./signin.scss";
 import CusttomButton from "../CusttomButton/custtom-button";
 import { auth } from "../../firebase/firebase.utils";
-import { connect } from "react-redux";
-import { spinnerAction } from "../../redux/spinner-reducer/spinner.action";
+
 import { withRouter } from "react-router-dom";
 
 class Signin extends React.Component {
@@ -19,7 +18,6 @@ class Signin extends React.Component {
     const { email, password } = form;
     try {
       await auth.signInWithEmailAndPassword(email.value, password.value);
-      this.props.spinnerAction();
       this.props.history.push("/tasks");
     } catch (error) {
       this.setState({ erreur: error.message }, () => console.log(this.state));
@@ -51,8 +49,4 @@ class Signin extends React.Component {
   }
 }
 
-const dispatchToProps = (dispatch) => ({
-  spinnerAction: () => dispatch(spinnerAction()),
-});
-
-export default withRouter(connect(null, dispatchToProps)(Signin));
+export default withRouter(Signin);

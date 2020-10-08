@@ -4,13 +4,16 @@ import Custtombutton from "../CusttomButton/custtom-button";
 import { connect } from "react-redux";
 import { createEvent } from "../../firebase/firebase.utils";
 import { AddEvent } from "../../redux/event-reducer/event.action";
+import Spinner2 from "../spinner2/spinner2";
 
 class EventForm extends React.Component {
   state = {
     date: "",
     event: "",
+    isLoading: false,
   };
   handleSubmit = async (e) => {
+    this.setState({ isLoading: true });
     e.preventDefault();
     const form = document.querySelector(".form");
     const { date, event } = form;
@@ -29,6 +32,7 @@ class EventForm extends React.Component {
     } catch (error) {
       console.log(error);
     }
+    this.setState({ isLoading: false });
   };
 
   handleChange = (event) => {
@@ -36,7 +40,11 @@ class EventForm extends React.Component {
     this.setState({ [name]: value });
   };
   render() {
-    return (
+    return this.state.isLoading ? (
+      <div className="svbb">
+        <Spinner2></Spinner2>
+      </div>
+    ) : (
       <form className="form" onSubmit={this.handleSubmit}>
         <div className="date-form">
           <label>Date</label>

@@ -2,8 +2,7 @@ import React from "react";
 import "./signup.scss";
 import CusttomButton from "../CusttomButton/custtom-button";
 import { auth, createUserProfile } from "../../firebase/firebase.utils";
-import { connect } from "react-redux";
-import { spinnerAction } from "../../redux/spinner-reducer/spinner.action";
+
 import { withRouter } from "react-router-dom";
 
 class Signup extends React.Component {
@@ -39,7 +38,6 @@ class Signup extends React.Component {
     } catch (error) {
       this.setState({ erreur: error.message });
     }
-    this.props.spinnerAction();
   };
 
   handleChange = (event) => {
@@ -96,8 +94,4 @@ class Signup extends React.Component {
   }
 }
 
-const dispatchToProps = (dispatch) => ({
-  spinnerAction: () => dispatch(spinnerAction()),
-});
-
-export default withRouter(connect(null, dispatchToProps)(Signup));
+export default withRouter(Signup);

@@ -3,13 +3,9 @@ import "./signin-signup.scss";
 import Signin from "../../Components/signin/signin";
 import { BiTask } from "react-icons/bi";
 import Signup from "../../Components/signup/signup";
-import { Spinner } from "../../Components/spinner/spinner";
-import { connect } from "react-redux";
 
-const SignInSignUp = ({ spinner }) => {
-  return spinner ? (
-    <Spinner></Spinner>
-  ) : (
+const SignInSignUp = () => {
+  return (
     <div className="container2">
       <div className="logo-container">
         {" "}
@@ -25,7 +21,5 @@ const SignInSignUp = ({ spinner }) => {
     </div>
   );
 };
-const mapStateToProps = (state) => ({
-  spinner: state.spinner.spinner,
-});
-export default connect(mapStateToProps)(SignInSignUp);
+
+export default SignInSignUp;

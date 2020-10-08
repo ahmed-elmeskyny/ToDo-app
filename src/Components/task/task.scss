@@ -1,8 +1,8 @@
 .task-container {
   display: flex;
   padding: 15px;
-  background-color: #f4f1f1;
-  border-bottom: 1px solid #d0cfcf;
+  background-color: rgba($color: #7fcec5, $alpha: 0.15);
+  border-bottom: 1px solid rgba($color: #7fcec5, $alpha: 0.3);
   .not-done {
     text-align: center;
     width: 35px;
@@ -10,7 +10,7 @@
     padding-top: 6.5px;
     border-radius: 50px;
     border: 1px solid;
-    color: #8b8989;
+    color: #7fcec5;
   }
   .done {
     text-align: center;
@@ -20,7 +20,7 @@
     border-radius: 50px;
     border: 1px solid;
     color: white;
-    background-color: #007fff;
+    background-color: #14557b;
   }
   .task-info {
     margin-left: 20px;

@@ -2,7 +2,7 @@
   width: 35%;
   height: 100%;
   padding: 10px;
-  border-right: 1px solid #d0cfcf;
+  border-right: 1px solid rgba($color: #7fcec5, $alpha: 0.3);
   .profile-data {
     display: flex;
     flex-direction: column;
@@ -17,7 +17,6 @@
       height: 150px;
       background-position: center;
       background-size: cover;
-      //   border: solid 2px #007fff;
       border-radius: 100px;
       margin-top: 1vh;
     }
@@ -48,7 +47,7 @@
         display: flex;
         justify-content: space-between;
         font-family: "Roboto", sans-serif;
-        background-color: #007fff;
+        background-color: rgba($color: #14557b, $alpha: 0.88);
         color: white;
         border-radius: 10px;
       }
@@ -64,7 +63,7 @@
           display: none;
         }
         &:hover {
-          background-color: #f0f8ff;
+          background-color: rgba($color: #7fcec5, $alpha: 0.1);
           .svg {
             display: flex;
           }

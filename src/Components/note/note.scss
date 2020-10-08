@@ -1,9 +1,9 @@
 .note-container {
   width: 200px;
-  background-color: lightseagreen;
   padding: 8px;
   margin: 10px;
   border-radius: 20px;
+  background-color: rgba($color: #7fcec5, $alpha: 0.2);
   .note-title {
     font-family: "Secular One", sans-serif;
     border-bottom: 2px black solid;

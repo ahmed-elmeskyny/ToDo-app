@@ -1,6 +1,6 @@
 import React from "react";
 import "./side-profile.scss";
-import pdp from "../assets/pdp2.jpeg";
+import pdp from "../assets/user-profile.png";
 import { AiOutlineArrowRight } from "react-icons/ai";
 import { withRouter } from "react-router-dom";
 import { connect } from "react-redux";
@@ -24,14 +24,14 @@ const SideProfile = ({ history, currentUser, tasks, events }) => (
         <div className="tasks completed">
           <h4 className="number">
             {tasks
-              ? tasks.reduce((acc, task) => (task.isDone ? acc + 1 : 0), 0)
+              ? tasks.reduce((acc, task) => (task.isDone ? acc + 1 : acc), 0)
               : 0}
           </h4>
           <span>completed</span>
         </div>
         <div className="tasks upcoming">
           <h4 className="number">
-            {events ? events.reduce((acc, event) => acc + 1, 0) : 0}
+            {events ? events.reduce((acc) => acc + 1, 0) : 0}
           </h4>
           <span>upcom.</span>
         </div>

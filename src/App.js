@@ -13,6 +13,7 @@ import setCurrentUser from "./redux/user/user.action";
 import { AddTask } from "./redux/task-reducer/task.action";
 import { AddEvent } from "./redux/event-reducer/event.action";
 import { Spinner } from "./Components/spinner/spinner";
+import { AddNote } from "./redux/note-reducer/note.action";
 
 class App extends React.Component {
   unsubscribeFromAuth = null;
@@ -50,23 +51,35 @@ class App extends React.Component {
               }
             })
           );
+        db.collection("UsersData")
+          .doc(`${user.uid}`)
+          .collection("UserNotes")
+          .get()
+          .then((snapshot) =>
+            snapshot.docs.map((doc) => {
+              if (doc.exists) {
+                this.props.AddNote(doc.data());
+              }
+            })
+          );
       } else {
         setCurrentUser(user);
       }
     });
-  }
-  componentWillUnmount() {
-    this.unsubscribeFromAuth();
   }
 
   render() {
     return (
       <>
         <TaskForm></TaskForm>
-        <Header></Header>
+        <Header unsub={this.unsubscribeFromAuth}></Header>
         <div className="main">
           <Switch>
-            <Route exact path="/" component={SignInSignUp} />
+            <Route
+              exact
+              path="/"
+              render={(props) => <SignInSignUp {...props}></SignInSignUp>}
+            />
 
             <Route
               exact
@@ -107,5 +120,6 @@ const dispatchProps = (dispatch) => ({
   setCurrentUser: (user) => dispatch(setCurrentUser(user)),
   AddTask: (task) => dispatch(AddTask(task)),
   AddEvent: (event) => dispatch(AddEvent(event)),
+  AddNote: (note) => dispatch(AddNote(note)),
 });
 export default withRouter(connect(mapStateToProps, dispatchProps)(App));
