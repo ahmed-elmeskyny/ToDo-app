@@ -3,7 +3,7 @@ export const AddNote = (note) => ({
   payload: note,
 });
 
-export const DeleteEvent = (id) => ({
+export const DeleteNote = (id) => ({
   type: "DELETE_NOTE",
   payload: id,
 });

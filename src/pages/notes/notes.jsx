@@ -18,7 +18,7 @@ const Notes = ({ notes }) => (
       </div>
       <div className="notes">
         {notes ? (
-          notes.map((note) => <Note key={note.id} note={note.note}></Note>)
+          notes.map((note) => <Note key={note.id} note={note.note} id={note.id}></Note>)
         ) : (
           <Empty> no notes to see</Empty>
         )}
