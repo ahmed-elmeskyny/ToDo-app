@@ -48,13 +48,13 @@ class TaskForm extends React.Component {
                 required
               ></input>
               <label>discription</label>
-              <input
+              <textarea
                 className="input2"
                 name="discription"
                 type="text"
                 placeholder="write..."
                 required
-              ></input>
+              ></textarea>
               <CusttomButton inverted type="submit">
                 Add task
               </CusttomButton>

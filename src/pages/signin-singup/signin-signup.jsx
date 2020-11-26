@@ -10,7 +10,7 @@ const SignInSignUp = ({ currentUser, history }) => {
   return currentUser ? (
     <div className="loggedin">
       <div> already logged in go to tasks :</div>
-      <CusttomButton inverted onClick={() => history.push("/tasks")}>
+      <CusttomButton inverted  onClick={() => history.push("/tasks")}>
         {" "}
         go to tasks
       </CusttomButton>
